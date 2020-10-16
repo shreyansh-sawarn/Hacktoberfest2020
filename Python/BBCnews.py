@@ -1,6 +1,11 @@
+'''
+Script to scrap the headlines of BBC News website home page using 
+Requests and BeautifulSoup module of Python
+'''
+
 import requests
 from bs4 import BeautifulSoup
-import pprint
+import pprint  # To print the result in prettify manner
 
 response = requests.get("https://www.bbc.com/")
 
