@@ -1,0 +1,214 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*Navigation Bar*/
+
+#navigation{
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-color:#5f369c;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+#item .links a{
+    color: white;
+}
+
+#item .links a:hover{
+    color: black;
+}
+
+#brand{
+    color: white;
+    text-decoration: none;
+}
+
+#navigation .navbar-toggler{
+    border: solid black 2px;
+}
+
+
+/*Jumbotron*/
+
+#image img{
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 20px;
+    opacity: 0.9;
+    
+}
+
+#image #form-heading{
+   
+   text-align: center;
+   color: black;
+   font-size: 50px;
+   font-weight: 100;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   background-color:#f2c111;
+   border-radius: 20px;
+   opacity: 0.9;
+}
+
+
+
+/*Form*/
+#form #instruct{
+    margin-top: 60px;
+    text-align: center;
+}
+
+#form{
+    
+    margin-top: 20px;
+    background-color:#f5ec8e;
+    width: 85%;
+    border-radius: 20px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.text{
+    font-size: 20px;
+    margin-bottom: 40px;
+    
+}
+
+#form h3{
+    text-align: center;
+    margin-top: 30px;
+    text-decoration-line: underline;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+#form form{
+    margin-top: 80px;
+    padding: 0px 20px 5px;
+}
+
+#button{
+    text-align: center;
+}
+
+#button .btn{
+    background-color: #eb753b;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+#button .btn:hover{
+    color: black;
+}
+
+
+
+/*Footer*/
+
+#footer{
+    background-color: #5f369c;
+    border-radius: 20px;
+    width: 99%;
+    margin-bottom: 30px;
+   
+}
+#footer-image{
+    text-align: center;
+    
+}
+footer img{
+    height: 85px;
+    width: 75px;
+    border: solid 1px black;
+    margin: 20px 0 20px;
+}
+#image-text{
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+}
+
+#icons{
+    text-align: center;
+}
+
+#icons .svg{
+    border: none;
+    margin: 30px 50px 30px;
+    height: 65px;
+    
+}
+
+/*Media Queries*/
+
+/*Medium Devices*/
+@media (min-width: 541px) and (max-width: 768px){
+    #image h1{
+        font-size: 35px;
+    }
+   
+    #form h3{
+        font-size: 22px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    #button .btn{
+        font-size: 17px;
+    }
+    
+    #image-text{
+        font-size: 25px;
+    }
+
+    #icons .svg{
+        width: 55px;
+        height: 55px;
+        margin: 30px 30px 30px;
+    }
+    #image #result{
+        font-size: 35px;
+    }
+    
+}
+
+
+
+/*Small Devices*/
+@media (max-width: 540px){
+    #image h1{
+        font-size: 30px;
+    }
+   
+    #form h3{
+        font-size: 20px;
+    }
+    .text{
+        font-size: 15px;
+    }
+    #form #instruct{
+        font-size: 13px;
+    }
+    #button .btn{
+        font-size: 15px;
+        border: solid black 1px;
+    }
+    #image-text{
+        font-size: 18px;
+    }
+    #icons .svg{
+        width: 40px;
+        height: 40px;
+        margin: 20px 10px 20px;
+        padding: 3px;
+    }
+    #image #result{
+        font-size: 30px;
+    }
+}
