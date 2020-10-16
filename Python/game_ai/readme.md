@@ -2,6 +2,6 @@
 A Tic-tac-toe game using Minimax Algorithm as AI agent
 #### Usage:
 `bash
-python <filename>.py 
+python tic_tac_toe_ai.py 
 `
 By Nikhil kumar
