@@ -1,0 +1,42 @@
+.array{
+    position: absolute;
+    left: 50px;
+    top: 180px;
+    border: solid black 2px;
+    padding: 20px 10px 0px 10px;
+    border-radius: 10px;
+    
+}
+
+
+.arrayBar{
+   border-left: 10px solid;
+   margin: 0 2px;
+   display: inline-block;
+   
+}
+
+#reset{
+    position: absolute;
+    top: 14%;
+    left: 3%;
+    
+    
+}
+
+#sort{
+    position: absolute;
+    top: 14%;
+    left: 11%;
+}
+
+#insertion-sort{
+    position: absolute;
+    top: 14%;
+    left: 19%;
+}
+#selection-sort{
+    position: absolute;
+    top: 14%;
+    left: 28%;
+}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Score Predictor</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    </link>
+    <link rel="stylesheet" href="../static/style.css" type = "text/css">
+    </link>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+
+    <header class="container-fluid">
+        <nav id="navigation" class="navbar-expand-sm  navbar nav navbar-light ">
+            <span class="navbar-brand">
+                <a id="brand" >Marks Predictor</a>
+            </span>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#item" aria-controls="item"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="item" class=" collapse navbar-collapse">
+                <ul class="navbar-nav">
+
+                    <li class="links nav-item">
+                        <a class="nav-link" href="#form-heading">Form</a>
+                    </li>
+                    <li class="links nav-item">
+                        <a class="nav-link" href="https://github.com/SharmaAkshat007/Marks-Predictor" target="_blank">AboutProject</a>
+                    </li>
+                    <li class="links nav-item">
+                        <a class="nav-link" href="#footer">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+
+    <!--Jumbotron-->
+    <div class="container-fluid jumbo">
+        <div id="image">
+            <img id="img" alt="top-image" src="../static/images/background.jpg">
+
+            </img>
+            <h1 id = "form-heading">Marks Predictor</h1>
+            {%if pred %}
+            <div id = "result">
+                <h3 style = "text-align: center;
+                color: black;
+                font-size: 25px;
+                font-weight: 100;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color:#f2c111;
+                border-radius: 20px;
+               
+                opacity: 0.9;">{{pred}}</h3>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <!--Form-->
+    <div id="form" class="container-fluid">
+        <h3>Please fill the following form to know your result</h3>
+        <h6 id="instruct">*Fill the form completely and correctly to predict your score correctly</h6>
+        <form action="/score_predict" method="POST" id="form-struct">
+            <div class="form-group text">
+                <label for="first">1) Enter your school name.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="1">
+                <small id="new_first" class="form-text text-muted">* "GP" - Gabriel Pereira or "MS" - Mousinho da
+                    Silveira</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="second">2) Enter your gender.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="2">
+                <small id="new_second" class="form-text text-muted">* "F" - female or "M" - male</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="third">3) Enter your age.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="3">
+                <small id="new_third" class="form-text text-muted">* from 15 to 22</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="fourth">4) Enter your address.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="4">
+                <small id="new_fourth" class="form-text text-muted">* "U" - urban or "R" - rural</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="fifth">5) Enter your family size.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="5">
+                <small id="new_fifth" class="form-text text-muted">* "LE3" - less or equal to 3 or "GT3" - greater than
+                    3</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="six">6) Enter your parental status.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="6">
+                <small id="new_six" class="form-text text-muted">* "T" - living together or "A" - apart</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="seven">7) Enter your mother's education level.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="7">
+                <small id="new_seven" class="form-text text-muted">* 0 - none, 1 - primary education (4th grade), 2 –
+                    5th to 9th grade, 3 – secondary education or 4 – higher education</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="eight">8) Enter your father's education level.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="8">
+                <small id="new_eight" class="form-text text-muted">* 0 - none, 1 - primary education (4th grade), 2 –
+                    5th to 9th grade, 3 – secondary education or 4 – higher education</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="nine">9) Enter your mother's job.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="9">
+                <small id="new_nine" class="form-text text-muted">* "teacher", "health" care related, civil "services"
+                    (e.g. administrative or police), "at_home" or "other"</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="ten">10) Enter your father's job.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="10">
+                <small id="new_ten" class="form-text text-muted">* "teacher", "health" care related, civil "services"
+                    (e.g. administrative or police), "at_home" or "other"</small>
+            </div>
+
+            <div class="form-group text">
+                <label for="eleven">11) Enter your reason to choose this school.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="11">
+                <small id="new_eleven" class="form-text text-muted">* close to "home", school "reputation", "course"
+                    preference or "other"</small>
+            </div>
+            <div class="form-group text">
+                <label for="twelve">12) Enter your guardian.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="12">
+                <small id="new_twelve" class="form-text text-muted">* "mother", "father" or "other"</small>
+            </div>
+            <div class="form-group text">
+                <label for="thirteen">13) Enter your travel time to reach the school.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="13">
+                <small id="new_thirteen" class="form-text text-muted">* 1 -> 15 min., 2 -> 15 to 30 min., 3 -> 30 min. to 1
+                    hour, or 4 -> 1 hour</small>
+            </div>
+            <div class="form-group text">
+                <label for="fourteen">14) Enter your study time.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="14">
+                <small id="new_fourteen" class="form-text text-muted">* 1 -> 2 hours, 2 -> 2 to 5 hours, 3 -> 5 to 10
+                    hours, or 4 -> 10 hours</small>
+            </div>
+            <div class="form-group text">
+                <label for="fifteen">15) Enter your number of past class failures.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="15">
+                <small id="new_fifteen" class="form-text text-muted">* n if 1 <= n < 3, else 4</small>
+            </div>
+            <div class="form-group text">
+                <label for="sixteen">16) Enter your extra educational support.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="16">
+                <small id="new_sixteen" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="seventeen">17) Enter your family eduactional support.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="17">
+                <small id="new_seventeen" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="eighteen">18) Enter your extra paid classes within the course subject.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="18">
+                <small id="new_eighteen" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="nineteen">19) Enter your extra-curricular activities.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="19">
+                <small id="new_nineteen" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="twenty">20) Enter your attended nursery school.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="20">
+                <small id="new_twenty" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="twoone">21) Enter your want to take higher education.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="21">
+                <small id="new_twoone" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="twotwo">22) Enter your internet access at your home.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="22">
+                <small id="new_twotwo" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="twothree">23) Enter your relationship status.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="23">
+                <small id="new_twothree" class="form-text text-muted">* yes or no</small>
+            </div>
+            <div class="form-group text">
+                <label for="twofour">24) Enter your quality of family relationships.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="24">
+                <small id="new_twofour" class="form-text text-muted">* from 1 - very bad to 5 - excellent</small>
+            </div>
+            <div class="form-group text">
+                <label for="twofive">25) Enter your free time after school.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="25">
+                <small id="new_twofive" class="form-text text-muted">* from 1 - very low to 5 - very high</small>
+            </div>
+            <div class="form-group text">
+                <label for="twosix">26) Enter your amount of going out with friends.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="26">
+                <small id="new_twosix" class="form-text text-muted">* from 1 - very low to 5 - very high</small>
+            </div>
+            <div class="form-group text">
+                <label for="twoseven">27) Enter your workday alcohol consumption.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="27">
+                <small id="new_twoseven" class="form-text text-muted">* from 1 - very low to 5 - very high</small>
+            </div>
+            <div class="form-group text">
+                <label for="twoeight">28) Enter your weekend alcohol consumption.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="28">
+                <small id="new_twoeight" class="form-text text-muted">* from 1 - very low to 5 - very high</small>
+            </div>
+            <div class="form-group text">
+                <label for="twonine">29) Enter your current health status.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="29">
+                <small id="new_twonine" class="form-text text-muted">* from 1 - very bad to 5 - very good</small>
+            </div>
+            <div class="form-group text">
+                <label for="thirty">30) Enter your number of absences from school.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="30">
+                <small id="new_thirty" class="form-text text-muted">* from 0 to 93</small>
+            </div>
+            <div class="form-group text">
+                <label for="thirtyone">31) Enter your first period grade.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="31">
+                <small id="new_thirtyone" class="form-text text-muted">* from 0 to 20</small>
+            </div>
+            <div class="form-group text">
+                <label for="thirtytwo">32) Enter your second period grade.</label>
+                <input type="text" class="form-control" aria-describedby="1_" name="32">
+                <small id="new_thirtytwo" class="form-text text-muted">* from 0 to 20</small>
+            </div>
+            <div id="button">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+            
+
+        </form>
+
+
+    </div>
+    <!--Contact-->
+    <footer id="footer" class="container-fluid">
+        <div id="footer-image">
+            <img title = "Developer" class="rounded-circle" alt="footer-image" src="../static/images/footer.jpeg">
+            </img>
+            <div title = "Developer" id="image-text">Akshat Sharma</div>
+        </div>
+        <div id="icons">
+            <a href="https://www.instagram.com/akshat_sharma_2001/" target="_blank"><img class="svg" title="Instagram"
+                    alt="instagram" src="../static/images/insta.svg"></img></a>
+            <a href="https://www.linkedin.com/in/akshat-sharma-8a412a193" target="_blank"><img class="svg"
+                    title="Linkedin" alt="Linkedin" src="../static/images/linkedin.svg"></img></a>
+            <a href="https://github.com/SharmaAkshat007" target="_blank"><img class="svg" title="GitHub" alt="github"
+                    src="../static/images/github.svg"></img></a>
+            <a href="https://www.hackerrank.com/akshatsharma9921" target="_blank"><img class="svg" title="HackerRank"
+                    alt="hackerrank" src="../static/images/hackerrank.svg"></img></a>
+        </div>
+    </footer>
+
+
+    <script src="../static/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    
+
+</body>
+
+</html>
