@@ -9,8 +9,7 @@ return recursionfun(n/10)+n%10;
 }
 int main()
 {
-    int i;
-    cin>>i;
+    int i=2323;
     int j=recursionfun(i);
     std::cout <<"sum of digit="<<j<< std::endl;
     return 0;
